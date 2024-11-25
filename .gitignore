@@ -1,0 +1,35 @@
+# Исключение среды Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Файлы и каталоги виртуальной среды
+env/
+venv/
+
+# Конфигурационные файлы
+*.env
+*.ini
+*.cfg
+.env
+# База данных
+db.sqlite3
+*.db
+
+# Файлы логов
+*.log
+
+# Файлы ОС
+.DS_Store
+Thumbs.db
+
+# Файлы IDE/редактора
+.vscode/
+.idea/
+
+# Статические файлы
+staticfiles/
+
+# Миграции
+*.~migrations
