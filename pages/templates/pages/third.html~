@@ -1,7 +1,0 @@
-{% extends 'base.html' %}
-
-{% block content %}
-<h1>Третья страница</h1>
-<p>Это текст третьей страницы.</p>
-<a href="/" class="btn btn-primary mt-3">Вернуться на главную</a>
-{% endblock %}
