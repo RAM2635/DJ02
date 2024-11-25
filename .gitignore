@@ -33,3 +33,4 @@ staticfiles/
 
 # Миграции
 *.~migrations
+*.html~
