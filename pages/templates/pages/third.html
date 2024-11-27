@@ -2,8 +2,22 @@
 
 {% block content %}
     <div class="bg-light p-4 rounded">
-        <h2 class="text-info">Третья страница</h2>
-        <p>Это текст третьей страницы. Вы можете добавить сюда больше контента.</p>
+        <h2 class="text-info">Новости</h2>
+        {% if news %}
+            <ul>
+                {% for item in news %}
+                    <li>
+                        <h3>{{ item.title }}</h3>
+                        <p><strong>Автор:</strong> {{ item.username }}</p>
+                        <p><strong>Дата публикации:</strong> {{ item.published_date|date:"d.m.Y H:i" }}</p>
+                        <p><strong>Описание:</strong> {{ item.description }}</p>
+                        <p><strong>Новость:</strong> {{ item.content }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Новостей пока нет.</p>
+        {% endif %}
         <a href="/" class="btn btn-info mt-3">Вернуться на главную</a>
     </div>
 {% endblock %}

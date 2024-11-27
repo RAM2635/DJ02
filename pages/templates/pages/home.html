@@ -6,4 +6,22 @@
         <p class="lead">Это главная страница вашего сайта.</p>
         <a href="/contacts/" class="btn btn-success btn-lg mt-3">Связаться с нами</a>
     </div>
+
+    <div class="mt-5">
+        <h2>Последние новости</h2>
+        <ul>
+            {% if news %}
+                {% for item in news %}
+                    <li>
+                        <h3>{{ item.title }}</h3>
+                        <p><strong>Автор:</strong> {{ item.username }}</p>
+                        <p><strong>Дата публикации:</strong> {{ item.published_date|date:"d.m.Y H:i" }}</p>
+                        <p>{{ item.description }}</p>
+                    </li>
+                {% endfor %}
+            {% else %}
+                <p>Новостей пока нет.</p>
+            {% endif %}
+        </ul>
+    </div>
 {% endblock %}
